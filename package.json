@@ -1,0 +1,26 @@
+{
+  "name": "desafio-manejoarchivos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "desafio3.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RomanMoreno99/Desafios.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RomanMoreno99/Desafios/issues"
+  },
+  "homepage": "https://github.com/RomanMoreno99/Desafios#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "node": "^20.7.0"
+  }
+}
