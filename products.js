@@ -1,4 +1,4 @@
-import ProductManager from "./desafio3.js";
+import ProductManager from "./models/PreEntrega.js";
 
 const productos = new ProductManager('./data/productos.json')
 

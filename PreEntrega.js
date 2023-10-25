@@ -25,7 +25,7 @@ export default class ProductManager {
             console.log(error)
         }
     }
-    addProduct(title, description, price, thumbnail, code, stock) {
+    addProduct(title, description, code, price, status, stock, category, thumbnail) {
 
         try {
             let mensaje
@@ -39,15 +39,17 @@ export default class ProductManager {
                     id: ++ProductManager.#id,
                     title,
                     description,
-                    price,
-                    thumbnail,
                     code,
-                    stock
+                    price,
+                    status,
+                    stock,
+                    category,
+                    thumbnail
                 }
 
                 if (!Object.values(newProduct).includes(undefined)) {
-                    writeFileSync(this.#path, JSON.stringify(this.#products))
                     this.#products.push(newProduct)
+                    writeFileSync(this.#path, JSON.stringify(this.#products))
                     mensaje = 'Se agrego el producto exitosamente!'
                 } else {
                     mensaje = "Completar todos los campos"
@@ -59,17 +61,7 @@ export default class ProductManager {
         }
     }
     getProduct() {
-        //return this.#products
-        try {
-            if (existsSync(this.#path)) {
-                const data = readFileSync(this.#path, 'utf-8')
-                return JSON.parse(data)
-            } else {
-                return 'Archivo inexistente'
-            }
-        } catch (error) {
-            console.log(error)
-        }
+        return this.#products
     }
 
     getProductById(id) {
@@ -85,8 +77,8 @@ export default class ProductManager {
 
             if (index != -1) {
                 const { id, ...rest } = propiedades
-                writeFileSync(this.#path, JSON.stringify(this.#products))
                 this.#products[index] = { ...this.#products[index], ...rest }
+                writeFileSync(this.#path, JSON.stringify(this.#products))
                 mensaje = 'Se actualizo correctamente el producto'
             } else
                 mensaje = `El producto con ID ${id} no existe`
@@ -103,8 +95,8 @@ export default class ProductManager {
             const index = this.#products.findIndex(p => p.id === id)
 
             if (index >= 0) {
-                writeFileSync(this.#path, JSON.stringify(this.#products))
                 this.#products.splice(index, 1)
+                writeFileSync(this.#path, JSON.stringify(this.#products))
                 mensaje = 'Producto fue eliminado'
             } else
                 mensaje = `No existe ningun producto con el ID ${id}`

@@ -1,28 +1,17 @@
-import express from 'express'
-import ProductManager from './desafio3.js'
-const app = express()
-const port = 3000
-const productos = new ProductManager('./data/productos.json')
+import express from 'express';
+import products from './router/products.js'
+import carts from './router/carts.js'
 
+const app = express()
+const port = 8080
+
+app.use(express.json())
+
+app.use('/api/products', products)
+app.use('/api/carts', carts)
 
 app.get('/', function (req, res) {
-    return res.send('Solución Lab 3')
-})
-
-app.get('/products', (req, res) => {
-    const { limit } = req.query
-    const p = productos.getProduct()
-    let cantProductos
-    if (limit)
-        cantProductos = p.slice(0, limit)
-    else
-        cantProductos = p
-    return res.json({ cantTotal: p.length, productos: cantProductos })
-})
-
-app.get('/products/:id', (req, res) => {
-    const { id } = req.params
-    return res.json(productos.getProductById(parseInt(id)))
+    return res.send('Primera Pre Entrega :D')
 })
 
 app.listen(port, () => {
