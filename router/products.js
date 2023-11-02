@@ -1,5 +1,5 @@
 import { Router } from "express";
-import ProductManager from "../PreEntrega.js";
+import ProductManager from "../models/product.js";
 
 const router = Router()
 

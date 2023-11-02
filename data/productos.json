@@ -1,1 +1,46 @@
-[{"id":1,"title":"vans","description":"Nuevas knú Sckool","code":"BB100","price":120,"status":true,"stock":8,"category":"Sneakers","thumbnail":"vans.jpg"},{"id":1,"title":"nike","description":"SB dunk Panda","code":"sb100","price":100,"status":true,"stock":8,"category":"Sneakers","thumbnail":"dunkpanda.jpg"},{"id":1,"title":"nike","description":"Jordan low 2","code":"mj100","price":150,"status":true,"stock":4,"category":"Sneakers","thumbnail":"jordan.jpg"},{"id":1,"title":"nike","description":"Jordan high","code":"mj200","price":300,"status":true,"stock":12,"category":"Sneakers","thumbnail":"jordan4.jpg"}]
+[
+    {
+        "id": 1,
+        "title": "vans",
+        "description": "Nuevas knú Sckool",
+        "code": "BB100",
+        "price": 120,
+        "status": true,
+        "stock": 8,
+        "category": "Sneakers",
+        "thumbnail": "/img/productos/knuskool.jpg"
+    },
+    {
+        "id": 1,
+        "title": "nike",
+        "description": "SB dunk Panda",
+        "code": "sb100",
+        "price": 100,
+        "status": true,
+        "stock": 8,
+        "category": "Sneakers",
+        "thumbnail": "/img/productos/dunkP.jpg"
+    },
+    {
+        "id": 1,
+        "title": "nike",
+        "description": "Jordan low 2",
+        "code": "mj100",
+        "price": 150,
+        "status": true,
+        "stock": 4,
+        "category": "Sneakers",
+        "thumbnail": "/img/productos/j1.jpeg"
+    },
+    {
+        "id": 1,
+        "title": "nike",
+        "description": "Jordan high",
+        "code": "mj200",
+        "price": 300,
+        "status": true,
+        "stock": 12,
+        "category": "Sneakers",
+        "thumbnail": "/img/productos/dunkH.jpeg"
+    }
+]

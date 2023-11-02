@@ -1,4 +1,4 @@
-import ProductManager from "./models/PreEntrega.js";
+import ProductManager from "./models/product.js";
 
 const productos = new ProductManager('./data/productos.json')
 

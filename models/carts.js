@@ -1,5 +1,5 @@
 import { readFileSync, writeFileSync, existsSync } from "node:fs"
-import ProductManager from "../PreEntrega.js"
+import ProductManager from "./product.js"
 
 export default class Cart {
 
